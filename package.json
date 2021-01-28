@@ -2,7 +2,7 @@
   "name": "amenity-junction-pre-reg",
   "version": "1.0.0",
   "description": "The pre-registration website for Amenity Junction.",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "start": "reload -b -p 8080 -d .",
     "deploy": "node deploy",
