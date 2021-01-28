@@ -30,7 +30,6 @@ if (require && require.main === module) {
 	}
 	const contents = fs.readdirSync(__dirname).filter(name => name !== path.basename(destDir));
 	fs.mkdirsSync(destDir);
-	debug(contents);
 	debug(`Ignoring ${AVOID.map(a => `"${a}"`).join(', ')}.`)
 	contents.filter(file => AVOID.indexOf(file) < 0).forEach(file => {
 		debug(`Copying ${file}...`);
@@ -50,7 +49,13 @@ if (require && require.main === module) {
 			'git add .',
 			'git commit -m \"Deploy\"',
 			'git branch -M gh-pages',
-			`git remote add origin \"${gitRepo}\"`,
+			async () => {
+				const remotes = await exec(`git remote`).split(/\s/g);
+				console.log(remotes, 'a');
+				if (remotes.indexOf('origin') < 0) {
+					const output = exec(`git remote add origin \"${gitRepo}\"`);
+				}
+			},
 			`git push -uf origin HEAD:gh-pages`
 		];
 		for (const cmd of commands) {
