@@ -50,7 +50,7 @@ if (require && require.main === module) {
 			'git commit -m \"Deploy\"',
 			'git branch -M gh-pages',
 			async () => {
-				const remotes = await exec(`git remote`).split(/\s/g);
+				const remotes = await exec(`git remote`).stdout.split(/\s/g);
 				console.log(remotes, 'a');
 				if (remotes.indexOf('origin') < 0) {
 					const output = exec(`git remote add origin \"${gitRepo}\"`);
