@@ -1,0 +1,26 @@
+{
+  "name": "amenity-junction-pre-reg",
+  "version": "1.0.0",
+  "description": "The pre-registration website for Amenity Junction.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amenity-Junction/preregister.git"
+  },
+  "keywords": [
+    "amenity",
+    "junction",
+    "community",
+    "service",
+    "jabalpur"
+  ],
+  "author": "Param Siddharth <contact@paramsid.com> (http://www.paramsid.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amenity-Junction/preregister/issues"
+  },
+  "homepage": "https://github.com/Amenity-Junction/preregister#readme"
+}
