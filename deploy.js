@@ -45,7 +45,8 @@ if (require && require.main === module) {
 		}
 	}
 	const contents = fs.readdirSync(__dirname).filter(name => name !== path.basename(destDir));
-	fs.mkdirsSync(destDir);
+	if (!fs.existsSync(destDir))
+		fs.mkdirsSync(destDir);
 	debug(`Ignoring ${AVOID.map(a => `"${a}"`).join(', ')}.`)
 	contents.filter(file => AVOID.indexOf(file) < 0).forEach(file => {
 		debug(`Copying ${file}...`);
