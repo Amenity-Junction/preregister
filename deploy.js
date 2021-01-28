@@ -7,29 +7,37 @@ const exec = util.promisify(require('child_process').exec);
 
 const AVOID = [
 	'.gitignore',
-	'.git'
+	'.git',
+	'package.json',
+	'package-lock.json',
+	'docs',
+	'README.md'
 ];
 
 if (require && require.main === module) {
 	const gitRepo = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json')))?.repository?.url?.substr(4);
 	const args = yargs(hideBin(process.argv)).alias({
 		'd': 'dest',
-		'v': 'verbose'
+		'v': 'verbose',
+		'c': 'clean'
 	}).argv;
 	let debug = args.v ? (...params) => console.log(...params) : () => {};
 	const destDir = args.d ?? path.join(__dirname, 'dist');
 	debug(`Deploying to ${gitRepo} via ${destDir}...`);
-	if (fs.existsSync(destDir)) {
+	if (args.c && fs.existsSync(destDir)) {
 		fs.emptyDirSync(destDir);
 		fs.rmdirSync(destDir);
 	}
-	const contents = fs.readdirSync(__dirname);
+	const contents = fs.readdirSync(__dirname).filter(name => name !== path.basename(destDir));
 	fs.mkdirsSync(destDir);
 	debug(contents);
 	debug(`Ignoring ${AVOID.map(a => `"${a}"`).join(', ')}.`)
 	contents.filter(file => AVOID.indexOf(file) < 0).forEach(file => {
 		debug(`Copying ${file}...`);
-		fs.copySync(path.join(__dirname, file), path.join(destDir, file));
+		fs.copySync(path.join(__dirname, file), path.join(destDir, file), {
+			overwrite: true,
+			recursive: true
+		});
 	});
 	(async () => {
 		process.chdir(destDir);
@@ -48,7 +56,7 @@ if (require && require.main === module) {
 		for (const cmd of commands) {
 			if (typeof cmd === 'string') {
 				const output = await exec(cmd);
-				debug(output);
+				debug(output?.stdout);
 			} else if (typeof cmd === 'function')
 				await cmd();
 		}
