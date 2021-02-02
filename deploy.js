@@ -11,6 +11,7 @@ const AVOID = [
 	'package.json',
 	'package-lock.json',
 	'deploy.js',
+	'.vscode',
 	'docs',
 	'README.md'
 ];

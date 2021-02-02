@@ -29,5 +29,9 @@
     "fs-extra": "^9.1.0",
     "reload": "^3.1.1",
     "yargs": "^16.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1"
   }
 }
