@@ -17,17 +17,23 @@
 		<script defer src='node_modules/bootstrap/dist/js/bootstrap.bundle.js'></script>
 		<script defer src='data/things.js'></script>
 	</head>
-	<body>
-		<header class='jumbotron container-fluid bg-success rounded-0 p-4 p-md-5 mb-0'>
+	<body class='bg-std'>
+		<header class='jumbotron container-fluid bg-std rounded-0 p-4 p-md-5 mb-0'>
 			<div class='row'>
-				<h1 class='col-12 display-4 d-none d-md-block font-weight-bold text-white'>Amenity Junction</h1>
-				<h1 class='col-12 text-center h3 d-md-none font-weight-bold text-white'>Amenity Junction</h1>
+				<h1 class='col-12 display-4 d-none d-md-block font-weight-bold text-white'>
+					<a href='.' class='brand-link'>Amenity Junction
+					<img class='brand-img' alt='Logo' src='data/logo.png' /></a>
+				</h1>
+				<h1 class='col-12 text-center h3 d-md-none font-weight-bold text-white'>
+					<a href='.' class='brand-link'>Amenity Junction
+					<img class='brand-img' alt='Logo' src='data/logo.png' /></a>
+				</h1>
 			</div>
 		</header>
-		<main class='container-fluid pt-3 pb-3 bg-dark text-white mt-0'>
+		<main class='container-fluid pt-3 pb-4 bg-dark text-white mt-0'>
 			<div class='row'>
 				<div class='col-12 col-md-10 offset-md-1'>
-					<div class='h5'>Registration form</div>
+					<div class='h3 text-center'>Registration form</div>
 				</div>
 			</div>
 			<div class='row'>
@@ -65,7 +71,13 @@
 						<label for='exp'>Years of Experience</label>
 						<input type='number' name='exp' id='exp' class='form-control' placeholder='Years of Experience' />
 					</div>
-					<div class='row'>
+					<div class="form-check">
+					  <label class="form-check-label">
+						<input type="checkbox" class="form-check-input" name="agreed" id="agreed">
+						I accept the <a href='./tnc' target='_blank'>terms and conditions</a> in effect under my registration into Amenity Junction.
+					  </label>
+					</div>
+					<div class='row mt-3'>
 						<div class='col-12 col-md-6 offset-md-3'>
 							<button type="submit" class="btn btn-block btn-primary">Submit</button>
 						</div>
@@ -73,5 +85,10 @@
 				</form>
 			</div>
 		</main>
+		<footer class='jumbotron container-fluid bg-std rounded-0 p-3 mb-0'>
+			<div class='row'>
+				<div class='col-12 text-center d-md-block text-white'>© Amenity Junction 2021</div>
+			</div>
+		</footer>
 	</body>
 </html>
