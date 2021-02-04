@@ -1,5 +1,5 @@
 const debug = (...args) => { /* console.log(...args); */ };
-const SERVER_URI = `https://aj-prereg.herokuapp.com/`;
+const SERVER_URI = `https://aj-prereg.herokuapp.com`;
 
 window.notifier = new AWN({
 	durations: {
