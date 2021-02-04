@@ -14,7 +14,7 @@ const months = [
 ];
 const dateFormat = dt => {
 	const date = new Date(dt);
-	return `${months[date.getMonth() - 1]} ${date.getDay()}, ${date.getFullYear()}`;
+	return `${months[date.getMonth()]} ${date.getDay()}, ${date.getFullYear()}`;
 };
 
 $(() => {
