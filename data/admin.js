@@ -70,7 +70,7 @@ $(() => {
 						lastHr = $('<hr/>').css('border-color', '#999');
 						$('.view-members').append(lastHr);
 					}
-					lastHr.remove();
+					lastHr?.remove();
 				} else
 					$('.view-members').html(`<div class="text-center text-danger">Failed (${await response.text()}).</div>`);
 				
