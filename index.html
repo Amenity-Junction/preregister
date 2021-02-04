@@ -12,9 +12,11 @@
 		<link rel='shortcut icon' href='favicon.ico' />
 		<link rel='icon' href='favicon.ico' />
 		<link rel='stylesheet' href='node_modules/bootstrap/dist/css/bootstrap.min.css'/>
+		<link rel='stylesheet' href='node_modules/awesome-notifications/dist/style.css'/>
 		<link rel='stylesheet' href='data/style.css'/>
 		<script defer src='node_modules/jquery	/dist/jquery.min.js'></script>
 		<script defer src='node_modules/bootstrap/dist/js/bootstrap.bundle.js'></script>
+		<script defer src='node_modules/awesome-notifications/dist/modern.var.js'></script>
 		<script defer src='data/things.js'></script>
 	</head>
 	<body class='bg-std'>
@@ -40,32 +42,32 @@
 				<form id='form' class='col-12 col-md-10 offset-md-1'>
 					<div class='form-group'>
 						<label for='name'>Name</label>
-						<input required type='text' name='name' id='name' class='form-control' placeholder='Name' />
+						<input type='text' name='name' id='name' class='form-control' placeholder='Name' />
 					</div>
 					<div class='form-group'>
 						<label for='address'>Address</label>
-						<textarea required rows='4' id='address' class='form-control'
+						<textarea rows='4' id='address' class='form-control'
 							placeholder='Address'></textarea>
 					</div>
 					<div class='form-group'>
 						<label for='phone'>Phone Number</label>
-						<input required type='tel' name='phone' id='phone' class='form-control' placeholder='Phone Number' />
+						<input type='tel' name='phone' id='phone' class='form-control' placeholder='Phone Number' />
 					</div>
 					<div class='form-group'>
 						<label for='aadhaar'>Aadhar Card Number</label>
-						<input required type='text' name='aadhaar' id='aadhaar' class='form-control' placeholder='Aadhaar Card Number' />
+						<input type='text' name='aadhaar' id='aadhaar' class='form-control' placeholder='Aadhaar Card Number' />
 					</div>
 					<div class='form-group'>
 						<label for='occupation'>Occupation</label>
-						<input required type='text' name='occupation' id='occupation' class='form-control' placeholder='Occupation' />
+						<input type='text' name='occupation' id='occupation' class='form-control' placeholder='Occupation' />
 					</div>
 					<div class='form-group'>
 						<label for='dob'>Data of Birth</label>
-						<input required type='date' name='dob' id='dob' class='form-control' placeholder='Date of Birth' />
+						<input type='date' name='dob' id='dob' class='form-control' placeholder='Date of Birth' />
 					</div>
 					<div class='form-group'>
 						<label for='photo'>Photo</label>
-						<input type='file' name='photo' id='photo' class='form-control' />
+						<input type='file' accept='image/*' name='photo' id='photo' class='form-control' />
 					</div>
 					<div class='form-group'>
 						<label for='exp'>Years of Experience</label>
