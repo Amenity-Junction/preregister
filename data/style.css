@@ -1,3 +1,7 @@
+:root {
+	scroll-behavior: smooth;
+}
+
 .bg-std {
 	background-color: blueviolet;
 }
