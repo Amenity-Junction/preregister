@@ -1,0 +1,26 @@
+{
+	"name": "css-spinners",
+	"version": "1.0.1",
+	"description": "Collections of CSS Loading Indicators / Spinners",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"watch": "sofy --compile"
+	},
+	"homepage": "https://github.com/varunsridharan/css-spinners",
+	"author": {
+		"name": "Varun Sridharan",
+		"email": "varunsridharan23@gmail.com",
+		"url": "http://varunsridharan.in"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/varunsridharan/css-spinners"
+	},
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+	"license": "GPL-3.0",
+	"devDependencies": {
+		"sofy": "^1.0.3"
+	}
+}

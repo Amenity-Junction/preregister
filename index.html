@@ -9,10 +9,103 @@
 		<meta name='author' content='Param Siddharth'/>
 		<meta name='copyright' content='© Amenity Junction 2021'/>
 		<meta name='robots' content='index,follow'/>
+		<link rel='shortcut icon' href='favicon.ico' />
+		<link rel='icon' href='favicon.ico' />
+		<link rel='stylesheet' href='node_modules/bootstrap/dist/css/bootstrap.min.css'/>
+		<link rel='stylesheet' href='node_modules/awesome-notifications/dist/style.css'/>
+		<link rel='stylesheet' href='node_modules/css-spinners/dist/all.min.css'/>
+		<link rel='stylesheet' href='data/style.css'/>
+		<script defer src='node_modules/jquery/dist/jquery.min.js'></script>
+		<script defer src='node_modules/bootstrap/dist/js/bootstrap.bundle.js'></script>
+		<script defer src='node_modules/awesome-notifications/dist/modern.var.js'></script>
+		<script defer src='data/things.js'></script>
+		<script defer src='data/home.js'></script>
 	</head>
-	<body>
-		<h1>Amenity Junction</h1>
-		<h2>Registration</h2>
-		<small>Work in progress...</small>
+	<body class='bg-std'>
+		<header class='jumbotron container-fluid bg-std rounded-0 p-4 p-md-5 mb-0'>
+			<div class='row'>
+				<h1 class='col-12 display-4 d-none d-md-block font-weight-bold text-white'>
+					<a href='.' class='brand-link'>Amenity Junction
+					<img class='brand-img' alt='Logo' src='data/logo.png' /></a>
+				</h1>
+				<h1 class='col-12 text-center h3 d-md-none font-weight-bold text-white'>
+					<a href='.' class='brand-link'>Amenity Junction
+					<img class='brand-img' alt='Logo' src='data/logo.png' /></a>
+				</h1>
+			</div>
+		</header>
+		<main class='submit container-fluid pt-3 pb-4 bg-dark text-white mt-0'>
+			<div class='row'>
+				<div class='col-12 col-md-10 offset-md-1'>
+					<div class='h3 text-center'>Registration form</div>
+				</div>
+			</div>
+			<div class='row'>
+				<form method='POST' id='form' class='col-12 col-md-10 offset-md-1'>
+					<div class='form-group'>
+						<label for='name'>Name</label>
+						<input type='text' name='name' id='name' class='form-control' placeholder='Name' />
+					</div>
+					<div class='form-group'>
+						<label for='address'>Address</label>
+						<textarea rows='4' id='address' class='form-control'
+							placeholder='Address'></textarea>
+					</div>
+					<div class='form-group'>
+						<label for='phone'>Phone Number</label>
+						<input type='tel' name='phone' id='phone' class='form-control' placeholder='Phone Number' />
+					</div>
+					<div class='form-group'>
+						<label for='aadhaar'>Aadhar Card Number</label>
+						<input type='text' name='aadhaar' id='aadhaar' class='form-control' placeholder='Aadhaar Card Number' />
+					</div>
+					<div class='form-group'>
+						<label for='occupation'>Occupation</label>
+						<input type='text' name='occupation' id='occupation' class='form-control' placeholder='Occupation' />
+					</div>
+					<div class='form-group'>
+						<label for='dob'>Data of Birth</label>
+						<input type='date' name='dob' id='dob' class='form-control' placeholder='Date of Birth' />
+					</div>
+					<div class='form-group'>
+						<label for='photo'>Photo</label>
+						<input type='file' accept='image/*' name='photo' id='photo' class='form-control' />
+					</div>
+					<div class='form-group'>
+						<label for='exp'>Years of Experience</label>
+						<input type='number' name='exp' id='exp' class='form-control' placeholder='Years of Experience' />
+					</div>
+					<div class="form-check">
+					  <label class="form-check-label">
+						<input type="checkbox" class="form-check-input" name="agreed" id="agreed">
+						I accept the <a href='./tnc' target='_blank'>terms and conditions</a> in effect under my registration into Amenity Junction.
+					  </label>
+					</div>
+					<div class='row mt-3'>
+						<div class='col-12 col-md-6 offset-md-3'>
+							<button type="submit" class="btn btn-block btn-primary">Submit</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+		<main class='submitted container-fluid pt-3 pb-4 bg-dark text-white mt-0'>
+			<div class='col-12 col-md-10 offset-md-1'>
+				<br/>
+				<br/>
+				<br/>
+				<span id='#response'>Done!</span> <br />
+				<button id='submitAnother' class="btn mt-1 btn-success">Submit another</button>
+				<br/>
+				<br/>
+				<br/>
+			</div>
+		</main>
+		<footer class='jumbotron container-fluid bg-std rounded-0 p-3 mb-0'>
+			<div class='row'>
+				<div class='col-12 text-center d-block text-white'>© Amenity Junction <script>document.write(new Date().getFullYear());</script> &nbsp;|
+					&nbsp;<small class='text-center'><a href='./admin'>Admin page</a></small></div>
+			</div>
+		</footer>
 	</body>
 </html>
